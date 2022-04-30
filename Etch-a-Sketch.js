@@ -34,5 +34,11 @@ cells.forEach(cell => cell.remove());
 
 }
 
-function paintCell(cell) {cell.target.classList.add('painted')};
+function randColor(){
+    return Math.floor(Math.random()*255)+1;
+}
+
+function paintCell(cell) {
+    cell.target.setAttribute(`style`, `background: rgb(${randColor()},${randColor()},${randColor()});`);
+};
 
